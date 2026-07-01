@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ISS-101",
+    "title": "JWT refresh token silently fails after 15 minutes",
+    "status": "open",
+    "priority": "urgent",
+    "assignee": "ES",
+    "dueDate": "2026-07-02"
+  },
+  {
+    "id": "ISS-102",
+    "title": "Dashboard stat cards flash 0 before loading real counts",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignee": "PN",
+    "dueDate": "2026-07-05"
+  },
+  {
+    "id": "ISS-103",
+    "title": "Add due date filter to issue search",
+    "status": "open",
+    "priority": "low",
+    "assignee": "",
+    "dueDate": "2026-07-10"
+  },
+  {
+    "id": "ISS-104",
+    "title": "MongoDB connection pool exhausted under load test",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "AM",
+    "dueDate": "2026-06-30"
+  },
+  {
+    "id": "ISS-105",
+    "title": "Toast notifications stack incorrectly on rapid actions",
+    "status": "closed",
+    "priority": "low",
+    "assignee": "PN",
+    "dueDate": "2026-06-24"
+  }
+]
