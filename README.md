@@ -14,7 +14,6 @@ A full-stack issue tracking application inspired by Jira and Linear.
 - User-specific Workspaces
 
 ## Tech Stack
-
 Frontend
 - React
 - Axios
