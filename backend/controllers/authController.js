@@ -1,11 +1,20 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { body, validationResult } from "express-validator";
 
 // ================= REGISTER =================
 
 export async function register(req, res) {
   try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        message: errors.array()[0].msg,
+        errors: errors.array(),
+      });
+    }
+
     const { name, email, password } = req.body;
 
     // Check if all fields exist
@@ -103,3 +112,9 @@ export async function login(req, res) {
     });
   }
 }
+
+export const registerValidation = [
+  body("email").isEmail().normalizeEmail(),
+  body("password").isLength({ min: 8 }),
+  body("name").trim().isLength({ min: 1, max: 100 }),
+];
