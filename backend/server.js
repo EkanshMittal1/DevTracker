@@ -6,10 +6,15 @@ import dotenv from "dotenv";
 import issueRoutes from "./routes/issues.js";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/userRoutes.js";
+
+// server.js
+import helmet from "helmet";
+
 dotenv.config();
 
 const app = express();
-
+app.use(helmet());
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true })); // not cors()
 app.use(cors());
 app.use(express.json());
 
